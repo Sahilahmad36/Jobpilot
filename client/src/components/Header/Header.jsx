@@ -4,7 +4,7 @@ import { Text } from "../Text/Text";
 import { Button } from "../Button/Button";
 import Select from "react-select"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 
 const languageOptions = [
@@ -35,24 +35,18 @@ export default function Header() {
   const [selectedLanguage, setSelectedLanguage] = useState(languageOptions[0]);
   const [selectedCountry, setSelectedCountry] = useState(countryOptions[0]); 
   const [searchInput, setSearchInput] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false); 
 
-  const handleLanguageChange = (selectedOption) => {
-    setSelectedLanguage(selectedOption); 
-  };
-
-  const handleCountryChange = (selectedOption) => {
-    setSelectedCountry(selectedOption); 
-  };
-
-  const handleSearchInputChange = (event) => {
-    setSearchInput(event.target.value); 
-  };
+  const handleLanguageChange = (selectedOption) => setSelectedLanguage(selectedOption); 
+  const handleCountryChange = (selectedOption) => setSelectedCountry(selectedOption); 
+  const handleSearchInputChange = (event) => setSearchInput(event.target.value); 
+  const toggleMenu = () => setMenuOpen(!menuOpen); 
 
   return (
     <header>
       <div className="header-top">
         <div className="container">
-          <ul className="menu">
+          <ul className={`menu ${menuOpen ? "menu-open" : ""}`}>
             <li><a href="/" className="menu-link"><Text size="textxs" className="menu-text">Home</Text></a></li>
             <li><a href="/" className="menu-link"><Text size="textxs" className="menu-text">Find Job</Text></a></li>
             <li><a href="/" className="menu-link"><Text size="textxs" className="menu-text">Employers</Text></a></li>
@@ -66,26 +60,24 @@ export default function Header() {
             <Text size="textxs" as="p" className="contact-text">+1-202-555-0178</Text>
             
             <div className="language-dropdown">
-            <a href="/">
-                  <Img src={selectedLanguage.icon} alt="language Icon" className="country-icon" /> 
-                </a>
+              <a href="/">
+                <Img src={selectedLanguage.icon} alt="language Icon" className="country-icon" /> 
+              </a>
               <Select
                 options={languageOptions}
                 className="language-select"
                 components={{ Option: CustomSelectOption }}
                 value={selectedLanguage} 
                 onChange={handleLanguageChange} 
-                placeholder={(
-                  <span>
-                    <img src={selectedLanguage.icon} alt={selectedLanguage.label} className="select-flag" /> 
-                    {selectedLanguage.label}
-                  </span>
-                )}
                 isSearchable={false} 
                 isClearable={false}
               />
             </div>
           </div>
+        </div>
+
+        <div className="hamburger" onClick={toggleMenu}>
+          <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
         </div>
       </div>
 
