@@ -1,15 +1,13 @@
-/* Basic styling for the select box container */
 .selectbox-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     border: 1px solid gray;
-    border-radius: 0; /* For the square shape */
+    border-radius: 0;
     padding: 5px;
   }
   
-  /* Styles for the select input */
   .selectbox-container .react-select__control {
     border: 1px solid gray;
     box-shadow: none;
@@ -31,9 +29,7 @@
     align-items: center;
   }
   
-  /* Responsive Styles */
   @media (min-width: 1024px) {
-    /* Laptop Styles */
     .selectbox-container {
       padding: 10px;
       font-size: 16px;
@@ -41,7 +37,6 @@
   }
   
   @media (max-width: 767px) {
-    /* Phone Styles */
     .selectbox-container {
       padding: 8px;
       font-size: 12px;
