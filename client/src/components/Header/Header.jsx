@@ -22,19 +22,19 @@ const countryOptions = [
   { label: "Germany", value: "de", icon: "images/german.png" },
 ];
 
-const customSelectOption = (props) => {
+const CustomSelectOption = (props) => {
   return (
-    <div className="language-option">
-      <img src={props.data.icon} alt={props.label} className="language-flag" />
-      <span className="language-label">{props.label}</span>
+    <div className="language-option" {...props.innerProps}>
+      <img src={props.data.icon} alt={props.data.label} className="language-flag" />
+      <span className="language-label">{props.data.label}</span>
     </div>
   );
 };
 
-export default function Header({ ...props }) {
+export default function Header() {
   const [selectedLanguage, setSelectedLanguage] = useState(languageOptions[0]);
   const [selectedCountry, setSelectedCountry] = useState(countryOptions[0]); 
-  const [searchInput, setSearchInput] = useState(""); // Add state for search input
+  const [searchInput, setSearchInput] = useState("");
 
   const handleLanguageChange = (selectedOption) => {
     setSelectedLanguage(selectedOption); 
@@ -50,56 +50,29 @@ export default function Header({ ...props }) {
 
   return (
     <header>
-    
       <div className="header-top">
         <div className="container">
-        <ul className="menu">
-            <li>
-              <a href="/" className="menu-link">
-                <Text size="textxs" className="menu-text">Home</Text>
-              </a>
-            </li>
-            <li>
-              <a href="/" className="menu-link">
-                <Text size="textxs" className="menu-text">Find Job</Text>
-              </a>
-            </li>
-            <li>
-              <a href="/" className="menu-link">
-                <Text size="textxs" className="menu-text">Employers</Text>
-              </a>
-            </li>
-            <li>
-              <a href="/" className="menu-link">
-                <Text size="textxs" className="menu-text">Candidates</Text>
-              </a>
-            </li>
-            <li>
-              <a href="/" className="menu-link">
-                <Text size="textxs" className="menu-text">Pricing Plans</Text>
-              </a>
-            </li>
-            <li>
-              <a href="/" className="menu-link">
-                <Text size="textxs" className="menu-text">Customer Support</Text>
-              </a>
-            </li>
+          <ul className="menu">
+            <li><a href="/" className="menu-link"><Text size="textxs" className="menu-text">Home</Text></a></li>
+            <li><a href="/" className="menu-link"><Text size="textxs" className="menu-text">Find Job</Text></a></li>
+            <li><a href="/" className="menu-link"><Text size="textxs" className="menu-text">Employers</Text></a></li>
+            <li><a href="/" className="menu-link"><Text size="textxs" className="menu-text">Candidates</Text></a></li>
+            <li><a href="/" className="menu-link"><Text size="textxs" className="menu-text">Pricing Plans</Text></a></li>
+            <li><a href="/" className="menu-link"><Text size="textxs" className="menu-text">Customer Support</Text></a></li>
           </ul> 
 
           <div className="contact">
-            <a href="/">
-              <FontAwesomeIcon icon={faPhone} className="contact-icon" />
-            </a>
+            <a href="/"><FontAwesomeIcon icon={faPhone} className="contact-icon" /></a>
             <Text size="textxs" as="p" className="contact-text">+1-202-555-0178</Text>
             
             <div className="language-dropdown">
-              <a href="/">
-                <img src={selectedLanguage.icon} alt={selectedLanguage.label} className="language-icon" />
-              </a>
+            <a href="/">
+                  <Img src={selectedLanguage.icon} alt="language Icon" className="country-icon" /> 
+                </a>
               <Select
                 options={languageOptions}
                 className="language-select"
-                components={{ Option: customSelectOption }}
+                components={{ Option: CustomSelectOption }}
                 value={selectedLanguage} 
                 onChange={handleLanguageChange} 
                 placeholder={(
@@ -113,7 +86,7 @@ export default function Header({ ...props }) {
               />
             </div>
           </div>
-          </div>
+        </div>
       </div>
 
       <div className="header-bottom">
@@ -126,7 +99,7 @@ export default function Header({ ...props }) {
                   <Img src={selectedCountry.icon} alt="Country Icon" className="country-icon" /> 
                 </a>
                 <Select
-                  components={{ Option: customSelectOption }}
+                  components={{ Option: CustomSelectOption }}
                   options={countryOptions}
                   className="country-select"
                   value={selectedCountry} 
@@ -158,4 +131,3 @@ export default function Header({ ...props }) {
     </header>
   );
 }
-
