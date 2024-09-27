@@ -1,7 +1,7 @@
 import React from "react";
 import Select from "react-select";
 import PropTypes from "prop-types";
-import "./SelectBox.css"; // Import the CSS file for styles
+import "./SelectBox.css";
 
 const SelectBox = React.forwardRef(
   (
