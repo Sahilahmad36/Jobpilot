@@ -1,8 +1,7 @@
 import React from "react";
-import "./Heading.css"; // Import the CSS file
-
+import "./Heading.css"
 const Heading = ({ children, className = "", size = "textlg", as, ...restProps }) => {
-  const Component = as || "h6"; // Default element is h6, can be overridden
+  const Component = as || "h6"; 
 
   return (
     <Component className={`heading ${className} ${size}`} {...restProps}>
