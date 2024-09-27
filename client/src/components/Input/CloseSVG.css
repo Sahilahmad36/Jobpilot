@@ -1,0 +1,25 @@
+.close-icon {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease, fill 0.3s ease;
+  }
+  
+  .close-icon:hover {
+    transform: rotate(90deg);
+    fill: red; 
+  }
+  
+  @media (max-width: 1200px) {
+    .close-icon {
+      width: 18px; 
+      height: 18px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .close-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  

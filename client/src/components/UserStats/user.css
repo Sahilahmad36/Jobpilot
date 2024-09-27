@@ -1,0 +1,62 @@
+/* UserStats.css */
+
+.user-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24%;
+    gap: 5px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    border-radius: 10px; /* or your preferred value */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .user-stats:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .user-stats-button {
+    background-color: rgba(173, 216, 230, 1); /* Replace with your desired blue color */
+    width: 72px;
+    border-radius: 50px; /* or your preferred value */
+    padding: 10px; /* Adjust padding as necessary */
+  }
+  
+  .user-stats-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .user-stats-number {
+    font-size: 24px;
+    font-weight: 500;
+    color: #4a4a4a; /* Dark grey for the number */
+  }
+  
+  .user-stats-label {
+    font-size: 16px;
+    font-weight: normal;
+    color: #8c8c8c; /* Lighter grey for the label */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .user-stats {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .user-stats-number {
+      font-size: 20px; /* Smaller font size for mobile */
+    }
+  
+    .user-stats-label {
+      font-size: 14px; /* Smaller font size for mobile */
+    }
+  }
+  

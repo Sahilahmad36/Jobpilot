@@ -1,0 +1,37 @@
+/* Slider.css */
+
+.active-slide {
+    transform: scale(0.75); /* Scale down the active slide */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  .alice-carousel {
+    /* Container styles */
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .alice-carousel .alice-carousel__stage {
+    /* Stage styles */
+    display: flex;
+  }
+  
+  @media (max-width: 768px) {
+    /* Responsive styles for smaller screens */
+    .active-slide {
+      transform: scale(0.6); /* Further scale down for mobile */
+    }
+  
+    .alice-carousel {
+      /* Adjust container on mobile */
+      padding: 0 20px;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    /* Styles for larger screens */
+    .active-slide {
+      transform: scale(0.75); /* Scale for desktop */
+    }
+  }
+  

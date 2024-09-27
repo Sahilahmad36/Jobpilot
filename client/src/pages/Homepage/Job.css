@@ -1,0 +1,169 @@
+/* General Styles */
+.job-search-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-section {
+  flex: 1;
+}
+
+.job-heading {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.job-description {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.location-input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.location-icon {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.find-job-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.find-job-button:hover {
+  background-color: #0056b3;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 30px;
+}
+
+.suggestions-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.suggestion-item {
+  font-size: 14px;
+  color: #007bff;
+}
+
+.illustration-img {
+  max-width: 40%;
+  object-fit: contain;
+  flex: 1;
+}
+
+/* Responsive for Laptops */
+@media (max-width: 1200px) {
+  .job-heading {
+    font-size: 40px;
+  }
+
+  .job-description {
+    font-size: 16px;
+  }
+
+  .location-input {
+    width: 90%;
+  }
+
+  .illustration-img {
+    max-width: 35%;
+  }
+}
+
+/* Responsive for Tablets */
+@media (max-width: 991px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .job-heading {
+    font-size: 34px;
+  }
+
+  .location-input {
+    width: 80%;
+  }
+
+  .illustration-img {
+    max-width: 40%;
+  }
+}
+
+/* Responsive for Phones */
+@media (max-width: 767px) {
+  .job-search-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .job-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+ 
+
+  .location-input {
+    width: 100%;
+  }
+  .suggestions{
+    margin-top: 20px;
+  }
+  .illustration-img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .find-job-button {
+    width: 100%;
+    padding: 15px;
+  }
+}

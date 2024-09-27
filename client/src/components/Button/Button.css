@@ -1,0 +1,79 @@
+/* Button shapes */
+.btn-round {
+    border-radius: 3px;
+  }
+  
+  /* Button variants and colors */
+  .btn-fill-blue_800 {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  .btn-fill-blue_50 {
+    background-color: #cce0ff;
+    color: #333;
+  }
+  
+  .btn-fill-blue_gray_50 {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .btn-fill-white_A700 {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .btn-outline-blue_100 {
+    border: 1px solid #cce0ff;
+    color: #0056b3;
+  }
+  
+  .btn-outline-blue_50 {
+    border: 1px solid #99ccff;
+    color: #0056b3;
+  }
+  
+  /* Button sizes */
+  .btn-xs {
+    height: 48px;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+  
+  .btn-sm {
+    height: 48px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+  
+  .btn-md {
+    height: 56px;
+    padding: 0 24px;
+    font-size: 16px;
+  }
+  
+  .btn-lg {
+    height: 72px;
+    padding: 0 32px;
+    font-size: 18px;
+  }
+  
+  /* Icon handling */
+  .btn-icon-left {
+    margin-right: 8px;
+  }
+  
+  .btn-icon-right {
+    margin-left: 8px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .btn-xs, .btn-sm, .btn-md, .btn-lg {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  

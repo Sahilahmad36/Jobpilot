@@ -1,0 +1,49 @@
+/* Base text styles */
+.text {
+    color: #6c757d; /* Equivalent to text-gray-500 */
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+  }
+  
+  /* Text sizes */
+  .textxs {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  
+  .texts {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
+  .textmd {
+    font-size: 18px;
+    font-weight: normal;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .textmd {
+      font-size: 15px;
+    }
+  
+    .texts {
+      font-size: 13px;
+    }
+  }
+  
+  /* Additional media query for smaller screens */
+  @media (max-width: 768px) {
+    .textmd {
+      font-size: 14px;
+    }
+  
+    .texts {
+      font-size: 12px;
+    }
+  
+    .textxs {
+      font-size: 12px;
+    }
+  }
+  

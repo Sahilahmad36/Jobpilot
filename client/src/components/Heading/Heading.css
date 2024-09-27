@@ -1,0 +1,83 @@
+/* Base heading styles */
+.heading {
+    color: #ffffff; /* White text color */
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Sizes (from smallest to largest) */
+  .textlg {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .textxl {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .text2xl {
+    font-size: 40px;
+    font-weight: 500;
+  }
+  
+  .text3xl {
+    font-size: 56px;
+    font-weight: 500;
+  }
+  
+  .texts {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .textmd {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .headingxs {
+    font-size: 12px;
+    font-weight: 600; /* More weight for a smaller heading */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1200px) {
+    .textlg {
+      font-size: 17px;
+    }
+  
+    .textxl {
+      font-size: 20px;
+    }
+  
+    .text2xl {
+      font-size: 34px;
+    }
+  
+    .text3xl {
+      font-size: 47px;
+    }
+  
+    .textmd {
+      font-size: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .textlg {
+      font-size: 15px;
+    }
+  
+    .textxl {
+      font-size: 18px;
+    }
+  
+    .text2xl {
+      font-size: 36px;
+    }
+  
+    .text3xl {
+      font-size: 42px;
+    }
+  }
+  

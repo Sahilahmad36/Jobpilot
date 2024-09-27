@@ -1,0 +1,56 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+}
+
+.homepage-container {
+    width: 100%;
+    background-color: #ffffff; /* white */
+}
+
+.content-container {
+    background-color: #f7f7f7; /* gray-100 */
+    padding: 90px 20px; /* default padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .content-container {
+        gap: 75px;
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        gap: 50px;
+        padding: 40px 20px;
+    }
+}
+
+.user-stats-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows the stats to wrap on smaller screens */
+    justify-content: center; /* Center the items */
+}
+
+.user-stats-container > div {
+    flex: 1 1 200px; /* Allow flexibility in size */
+    min-width: 200px; /* Minimum width for stats cards */
+    text-align: center; /* Center the text */
+}
+
+/* Add hover effect if needed */
+.user-stats-container > div:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* Additional styles for other components */
