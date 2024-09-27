@@ -1,11 +1,9 @@
-/* Base text styles */
 .text {
-    color: #6c757d; /* Equivalent to text-gray-500 */
+    color: #6c757d; 
     font-family: 'Inter', sans-serif;
     font-style: normal;
   }
   
-  /* Text sizes */
   .textxs {
     font-size: 14px;
     font-weight: normal;
@@ -21,7 +19,6 @@
     font-weight: normal;
   }
   
-  /* Responsive adjustments */
   @media (max-width: 1024px) {
     .textmd {
       font-size: 15px;
@@ -32,7 +29,6 @@
     }
   }
   
-  /* Additional media query for smaller screens */
   @media (max-width: 768px) {
     .textmd {
       font-size: 14px;
