@@ -1,10 +1,8 @@
-/* Base heading styles */
 .heading {
-    color: #ffffff; /* White text color */
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
   }
   
-  /* Sizes (from smallest to largest) */
   .textlg {
     font-size: 20px;
     font-weight: 500;
@@ -37,10 +35,9 @@
   
   .headingxs {
     font-size: 12px;
-    font-weight: 600; /* More weight for a smaller heading */
+    font-weight: 600; 
   }
   
-  /* Responsive Adjustments */
   @media (max-width: 1200px) {
     .textlg {
       font-size: 17px;
